@@ -13,48 +13,70 @@ body {
   padding: clamp(20px, 20vw, 200px) 20px 0;
 }
 
-.container{
-  display:flex;
+.container {
+  display: flex;
   justify-content: center;
-
 }
 
-.input-group input{
-  display:block;
-  width:200px;
-  border:none;
+.input-group input {
+  display: block;
+  width: 200px;
+  border: none;
   border: 2px solid #000; /* Bordure noire de 2 pixels */
-  border-radius: 5px;    /* Coins arrondis */
-  padding: 0px;          /* Espace intérieur */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 0px; /* Espace intérieur */
 }
 
-.orientation{
-  display:block;
+.range-group {
+  display: block;
   width: 100px;
-  height:25px;
-  margin-top:15px;
-  padding:2px;
-  background-color:#f1f1f1;
-  border-radius:5px;
-  color:#333;
-  font-size:12px;
+  height: 25px;
+  margin-top: 15px;
+  padding: 2px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  color: #333;
+  font-size: 12px;
   text-align: center;
 }
-.curseur{
-  display:block;
+.range-group span {
+  display: inline-flex; /* Utilise flexbox */
+  align-items: center; /* Centre verticalement */
+  justify-content:left; /* Centre horizontalement */
+  color: #333;
+  font-size: 12px;
+}  
+.curseur {
+  display: block;
   width: 100px;
-  height:1px;
-  margin-top:15px;
-  padding:2px;
-  background-color:#f1f1f1;
-  border-radius:5px;
-  position:relative;
-  
+  height: 1px;
+  margin-top: 15px;
+  padding: 2px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  position: relative;
 }
 
-.pointeur{
+.pointeur {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 5px;
-  height:5px;
-  border-radius:2px;
+  height: 5px;
+  border-radius: 5px;
   background-color: blue;
+  cursor:pointer;
+}
+
+button {
+  display: inline-flex; /* Utilise flexbox */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  width: 100px;
+  height: 15px;
+  margin-top: 25px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius:5px;
+  border:none;
 }
