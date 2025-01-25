@@ -1,4 +1,20 @@
 // Recupération des valeurs des inputs à mettre dans les labels
+const colorInputs = [...document.querySelectorAll('input[type="color"]')];
+
+console.log(colorInputs);
+
+let human= {
+    teeth : 32
+}
+
+let gwen = {
+   __proto__:human,
+    age : 22
+}
+
+console.log(gwen.teeth)
+
+
 const inputs =document.querySelectorAll('input');
 const labels = document.querySelector('label');
 const body = document.querySelector('body');
@@ -12,7 +28,7 @@ const inputRange =document.querySelector('#orientation')
 // Declaration des boutons : 
 const btnCopy = document.querySelector('.copy-btn');
 const btnRandom = document.querySelector('.random-btn');
-const recupValeur=[];
+let recupValeur=[];
 
 input1.addEventListener('input',(e)=>{
     label1.textContent=input1.value
@@ -23,13 +39,13 @@ input2.addEventListener('input',(e)=>{
 inputRange.addEventListener('input',(e)=>{
     labelOrientation.textContent=`${inputRange.value}°`;
 })
-
+// On ecoute le click sur le bouton
 btnCopy.addEventListener('click',(e)=> {
     inputs.forEach(color => {
         recupValeur.push(color.value); 
-        //labels[color].textContent=`${color.value}`   
+          
     })
     body.style.background=`linear-gradient(${recupValeur[2]}deg, ${recupValeur[0]}, ${recupValeur[1]})`;
-
-    //recupValeur=[];
+    console.log(recupValeur);
+    recupValeur=[];
 })
