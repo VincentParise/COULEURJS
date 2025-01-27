@@ -8,7 +8,7 @@ let human= {
 }
 
 let gwen = {
-   __proto__:human,
+   __proto__:human, // !!!???
     age : 22
 }
 
